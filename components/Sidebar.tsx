@@ -11,9 +11,9 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`bg-secondary   shadow-xl border-r-1 border-r-gray-600   p-2 ${
+      className={`bg-secondary shadow-xl border-r-1 border-r-gray-600   p-2 ${
         open
-          ? "w-[20em] ease-in duration-300"
+          ? "w-[45em] sm:w-[20em] ease-in duration-300"
           : "w-[4.5m] ease-out duration-300"
       }`}
     >
@@ -42,22 +42,22 @@ const Sidebar = () => {
             className="flex flex-1 justify-between items-center "
             key={item.title}
           >
-            <div className="left flex">
+            <div
+              className={`left flex items-center justify-center ${
+                !open && "mx-auto"
+              }`}
+            >
               <Image
                 src={item.img}
                 alt="icons"
-                width={15}
-                height={15}
-                className={`${
-                  !open
-                    ? "ml-4 w-[20px] h-[20px] object-contain"
-                    : "ml-2 object-contain"
-                }`}
+                width={13}
+                height={13}
+                className={`${!open ? "w-[20px] h-[20px]  " : "w-[26px]"}`}
               />
               <p
                 className={
                   open
-                    ? "block text-[12px] sm:text-lg ml-4 text-[#7879F1]"
+                    ? "block text-[12px] sm:text-lg ml-2 text-[#7879F1]"
                     : "hidden"
                 }
               >
