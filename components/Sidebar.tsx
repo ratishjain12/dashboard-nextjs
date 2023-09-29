@@ -17,23 +17,23 @@ const Sidebar = () => {
           : "w-[4.5m] ease-out duration-300"
       }`}
     >
-      <div className="topsection flex flex-1 justify-between gap-1  items-center ">
-        <span className={open ? "block text-[0.6em] sm:text-lg" : "hidden"}>
+      <div className="topsection flex flex-1 justify-between gap-1 flex-wrap  items-center ">
+        <span className={open ? "block text-xs sm:text-lg" : "hidden"}>
           weframetech
         </span>
         <button onClick={handleClick} className="relative">
           <Image
             src="/hamburgermenu.svg"
-            width={60}
-            height={50}
+            width={40}
+            height={40}
             alt="burger-menu "
-            className={`w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] sm:ml-0  sm:mt-0 ${
+            className={`w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] sm:ml-0  sm:mt-0 ${
               !open ? "mx-auto" : "ml-0 mt-0"
             }`}
           />
         </button>
       </div>
-      <div className="mainmenu flex flex-col flex-1 gap-6 mt-4">
+      <div className="mainmenu flex flex-col flex-1 gap-6 mt-4 ">
         <p className={open ? "block text-[0.4em] sm:text-lg ml-2" : "hidden"}>
           MAIN MENU
         </p>
@@ -50,8 +50,8 @@ const Sidebar = () => {
               <Image
                 src={item.img}
                 alt="icons"
-                width={13}
-                height={13}
+                width={12}
+                height={12}
                 className={`${
                   !open ? "w-[20px] h-[20px]  " : "w-[10px] sm:w-[26px]"
                 }`}
