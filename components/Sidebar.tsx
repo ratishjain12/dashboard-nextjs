@@ -44,7 +44,7 @@ const Sidebar = () => {
           >
             <div
               className={`left flex items-center justify-center gap-1${
-                !open && "mx-auto"
+                !open && "w-full mx-auto"
               }`}
             >
               <Image
@@ -53,7 +53,7 @@ const Sidebar = () => {
                 width={12}
                 height={12}
                 className={`${
-                  !open ? "w-[20px] h-[20px]  " : "w-[10px] sm:w-[26px]"
+                  !open ? "w-[20px] h-[20px] " : "w-[10px] sm:w-[26px]"
                 }`}
               />
               <p

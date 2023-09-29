@@ -9,11 +9,16 @@ interface cards {
 }
 
 const Cards = ({ type, status, title, progress, color }: cards) => {
-  const textColor = `text-[${color}]`;
   return (
     <div className=" bg-[#211A75] p-2 rounded-lg max-w-[280px] ">
-      <div className="topsection relative flex flex-1 justify-between items-center">
-        <span className={textColor}>{status}</span>
+      <div className="topsection relative flex flex-1 gap-2 items-center">
+        <span
+          className="w-[5px] h-[5px] rounded-full"
+          style={{ backgroundColor: `${color}` }}
+        ></span>
+        <span className="" style={{ color: `${color}` }}>
+          {status}
+        </span>
         <span className="absolute right-0 top-[-5px]">...</span>
       </div>
       <div className="mt-3">
