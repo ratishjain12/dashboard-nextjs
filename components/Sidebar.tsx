@@ -44,19 +44,30 @@ const Sidebar = () => {
               <Image
                 src={item.img}
                 alt="icons"
-                width={20}
-                height={20}
-                className={`ml-4 ${!open && "w-full"}`}
+                width={30}
+                height={30}
+                className={`${!open ? "ml-4" : "ml-2"}`}
               />
               <p
                 className={
-                  open ? "block text-[10px] sm:text-lg ml-4" : "hidden"
+                  open
+                    ? "block text-[12px] sm:text-lg ml-4 text-[#7879F1]"
+                    : "hidden"
                 }
               >
                 {item.title}
               </p>
             </div>
-            {item.arrow && <div className="right"></div>}
+            {item.arrow && (
+              <div className="right">
+                <Image
+                  src="ic_chevron.svg"
+                  alt="rightarrow"
+                  width={20}
+                  height={20}
+                />
+              </div>
+            )}
           </div>
         ))}
         <Image
