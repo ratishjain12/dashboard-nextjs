@@ -17,8 +17,8 @@ const Sidebar = () => {
           : "w-[4.5m] ease-out duration-300"
       }`}
     >
-      <div className="topsection flex flex-1 justify-between  items-center ">
-        <span className={open ? "block text-[12px] sm:text-lg" : "hidden"}>
+      <div className="topsection flex flex-1 justify-between gap-1  items-center ">
+        <span className={open ? "block text-[0.6em] sm:text-lg" : "hidden"}>
           weframetech
         </span>
         <button onClick={handleClick} className="relative">
@@ -28,13 +28,13 @@ const Sidebar = () => {
             height={50}
             alt="burger-menu "
             className={`w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] sm:ml-0  sm:mt-0 ${
-              !open ? "mt-3 ml-3" : "ml-0 mt-0"
+              !open ? "mx-auto" : "ml-0 mt-0"
             }`}
           />
         </button>
       </div>
       <div className="mainmenu flex flex-col flex-1 gap-6 mt-4">
-        <p className={open ? "block text-[10px] sm:text-lg ml-4" : "hidden"}>
+        <p className={open ? "block text-[0.4em] sm:text-lg ml-2" : "hidden"}>
           MAIN MENU
         </p>
         {sideBarItems.map((item) => (
@@ -43,7 +43,7 @@ const Sidebar = () => {
             key={item.title}
           >
             <div
-              className={`left flex items-center justify-center ${
+              className={`left flex items-center justify-center gap-1${
                 !open && "mx-auto"
               }`}
             >
@@ -52,12 +52,14 @@ const Sidebar = () => {
                 alt="icons"
                 width={13}
                 height={13}
-                className={`${!open ? "w-[20px] h-[20px]  " : "w-[26px]"}`}
+                className={`${
+                  !open ? "w-[20px] h-[20px]  " : "w-[10px] sm:w-[26px]"
+                }`}
               />
               <p
                 className={
                   open
-                    ? "block text-[12px] sm:text-lg ml-2 text-[#7879F1]"
+                    ? "block text-[0.7em] sm:text-lg ml-2 text-[#7879F1]"
                     : "hidden"
                 }
               >
@@ -65,7 +67,7 @@ const Sidebar = () => {
               </p>
             </div>
             {item.arrow && (
-              <div className="right">
+              <div className="right ml-1">
                 <Image
                   src="ic_chevron.svg"
                   alt="rightarrow"
